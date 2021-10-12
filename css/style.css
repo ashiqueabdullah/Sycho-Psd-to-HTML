@@ -23,9 +23,17 @@
 
 
 /* 1. Theme default css */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
- body {
-	font-family: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@500;600&family=Montserrat:wght@400;500;600&display=swap');
+:root{
+	--font-cupr: 'Cuprum', sans-serif; 
+	--font-mons:'Montserrat', sans-serif;
+	--header-bg: #1d6863;
+	--text-green: #056c5f;
+	--text-pink: #f8a683;
+	--bg-pink: #f2e0d0;
+	--bg-pink-light: #f2ede7;
+}
+body {
 	font-weight: normal;
 	font-style: normal;
 }
@@ -253,7 +261,100 @@ label {
 	background: #444;
 }
 
-
+/* Header Area Start */
+.header-transparent{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+.header-area{
+	padding:20px 0px;
+	background-color: var(--header-bg);
+}
+.header-area ul.main-menu{
+	margin: 0px;
+	padding: 0px;
+}
+.header-area ul.main-menu li{
+	display: inline-block;
+}
+.header-area ul.main-menu li a{
+	text-transform: uppercase;
+	padding: 20px 15px;
+	display: block;
+	color: white;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: var(--font-mons);
+	transition: .3s;
+	position: relative;
+}.header-area ul.main-menu li a::before{
+	content: "";
+	position: absolute;
+	top: 80%;
+	background-color: var(--text-pink);
+	height: 17px;
+	width: 2px;
+	left: 50%;
+	visibility: hidden;
+	opacity: 0;
+	transition: .3s;
+}
+.header-area ul.main-menu li a:hover:before{
+	visibility: visible;
+	opacity: 1;
+	top: 65%;
+}
+.header-area ul.main-menu li a.active{
+	color: var(--text-pink);
+}
+.header-area ul.main-menu li a.active:after{
+	color: var(--text-pink);
+	content: "";
+	position: absolute;
+	top: 65%;
+	background-color: var(--text-pink);
+	height: 17px;
+	width: 2px;
+	left: 50%;
+}
+.header-area ul.main-menu li a:hover{
+	color: var(--text-pink);
+}
+.header-area .phone{
+	margin-right: 10px;
+}
+.header-area .phone img{}
+.header-area .phone span{
+	color: white;
+	font-size: 15px;
+	font-family: var(--font-mons);
+	font-weight: 400;
+}
+.header-area .bar{
+	background-color: white;
+	border-radius: 20px;
+	padding: 4px 6px;
+	cursor: pointer;
+}
+.header-area .bar span{
+	margin-top: 4px;
+	margin-bottom: 4px;
+	height: 2px;
+	color: white;
+	display: block;
+	width: 20px;
+	background-color: var(--text-pink);
+}
+.header-area .bar span.span-mid{
+	width: 15px!important;
+}
+/* Slider Area Start */
+.slider{}
+.slider img{
+	width: 100%;
+}
 
 
 
